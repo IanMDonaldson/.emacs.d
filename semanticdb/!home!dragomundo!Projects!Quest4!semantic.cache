@@ -1,0 +1,970 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("fstream" include (:system-flag t) nil [1 19])
+            ("iostream" include (:system-flag t) nil [20 39])
+            ("random" include (:system-flag t) nil [40 57])
+            ("library.h" include nil nil [58 78])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [80 100])
+            ("Library" function
+               (:constructor-flag t
+                :parent "Library"
+                :type ("Library" type (:type "class") nil nil))
+                nil [102 294])
+            ("Library" function
+               (:destructor-flag t
+                :parent "Library"
+                :type "void")
+                nil [296 370])
+            ("addBookFromFile" function
+               (:parent "Library"
+                :arguments 
+                  ( ("authorInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [405 431])
+                    ("titleInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [432 457])
+                    ("ID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [458 472])
+                    ("checkedOutInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [473 501])
+                    ("bookType" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [502 522])
+                    ("iterator" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [523 543]))                  
+                :type "void")
+                nil [375 775])
+            ("checkIn" function
+               (:parent "Library"
+                :arguments 
+                  ( ("bookID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [799 817])
+                    ("audiobookID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [818 841])
+                    ("bookType" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [842 862]))                  
+                :type "bool")
+                nil [777 1389])
+            ("checkIn" function
+               (:parent "Library"
+                :arguments 
+                  ( ("inventoryLoaded" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1413 1441]))                  
+                :type "void")
+                nil [1391 2876])
+            ("checkOut" function
+               (:parent "Library"
+                :arguments 
+                  ( ("bookID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2901 2919])
+                    ("audiobookID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2920 2943])
+                    ("bookType" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2944 2964]))                  
+                :type "bool")
+                nil [2878 3486])
+            ("checkOut" function
+               (:parent "Library"
+                :arguments 
+                  ( ("inventoryLoaded" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [3511 3539]))                  
+                :type "void")
+                nil [3488 4995])
+            ("addBook" function
+               (:parent "Library"
+                :arguments 
+                  ( ("authorInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5019 5045])
+                    ("titleInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5068 5093])
+                    ("bookID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5116 5134])
+                    ("audiobookID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5157 5180])
+                    ("checkedOutInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [5203 5231])
+                    ("bookType" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5254 5274]))                  
+                :type "bool")
+                nil [4997 5766])
+            ("addNewBook" function
+               (:parent "Library"
+                :type "void")
+                nil [5768 7188])
+            ("removeBook" function
+               (:parent "Library"
+                :arguments 
+                  ( ("inventoryLoaded" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [7215 7243]))                  
+                :type "void")
+                nil [7190 8578])
+            ("removeBook" function
+               (:parent "Library"
+                :arguments 
+                  ( ("bookID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8605 8623])
+                    ("bookType" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8624 8644]))                  
+                :type "bool")
+                nil [8580 9577])
+            ("loadBooks" function
+               (:parent "Library"
+                :arguments 
+                  ( ("fileName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9603 9627]))                  
+                :type "bool")
+                nil [9579 11950])
+            ("saveBooks" function
+               (:parent "Library"
+                :arguments 
+                  ( ("fileName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11976 12000]))                  
+                :type "bool")
+                nil [11952 13703])
+            ("findBook" function
+               (:parent "Library"
+                :arguments 
+                  ( ("ID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [13727 13741])
+                    ("bookType" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [13742 13762]))                  
+                :type "int")
+                nil [13705 14313])
+            ("randomBook" function
+               (:parent "Library"
+                :arguments 
+                  ( ("inventoryLoaded" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [14340 14368]))                  
+                :type "void")
+                nil [14315 15595]))          
+      :file "library.cpp"
+      :pointmax 15596
+      :fsize 15779
+      :lastmodtime '(23518 7128 522970 942000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("LIBRARY_H" variable (:constant-flag t) nil [27 36])
+            ("string" include (:system-flag t) nil [37 54])
+            ("audiobooks.h" include nil nil [55 78])
+            ("books.h" include nil nil [79 97])
+            ("Library" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [116 123])
+                    ("Library" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Library" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [128 138])
+                    ("Library" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [270 281])
+                    ("addBookFromFile" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("authorInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [316 347])
+                            ("titleInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [356 386])
+                            ("ID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [395 409])
+                            ("checkedOutInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [418 446])
+                            ("bookType" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [455 475])
+                            ("iterator" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [484 509]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [286 510])
+                    ("loadBooks" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fileName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [531 559]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [516 560])
+                    ("saveBooks" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fileName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [580 608]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [565 609])
+                    ("checkIn" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("inventoryLoaded" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [628 656]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [615 657])
+                    ("checkOut" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("inventoryLoaded" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [677 705]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [663 706])
+                    ("addNewBook" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [712 730])
+                    ("removeBook" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("inventoryLoaded" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [751 779]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [735 780])
+                    ("randomBook" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("inventoryLoaded" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [802 830]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [786 831])
+                    ("private" label nil (reparse-symbol classsubparts) [833 841])
+                    ("findBook" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [860 874])
+                            ("bookType" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [875 895]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [847 896])
+                    ("addBook" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("authorInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [929 960])
+                            ("titleInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [969 999])
+                            ("bookID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1008 1026])
+                            ("audiobookID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1035 1058])
+                            ("checkedOutInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1067 1095])
+                            ("bookType" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1104 1129]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [902 1130])
+                    ("removeBook" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("eitherBookID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1152 1176])
+                            ("bookType" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1177 1197]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1136 1198])
+                    ("checkOut" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bookID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1218 1236])
+                            ("audiobookID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1236 1259])
+                            ("bookType" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1260 1280]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1204 1281])
+                    ("checkIn" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bookID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1299 1317])
+                            ("audiobookID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1318 1341])
+                            ("bookType" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1342 1362]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1286 1363])
+                    ("bookInv" variable
+                       (:pointer 2
+                        :type ("Books" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1371 1398])
+                    ("audioBookInv" variable
+                       (:pointer 2
+                        :type ("AudioBooks" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1403 1440])
+                    ("MAX_BOOKS" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1445 1465])
+                    ("MAX_AUDIOBOOKS" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1470 1495])
+                    ("numBooks" variable (:type "int") (reparse-symbol classsubparts) [1500 1513])
+                    ("numAudioBooks" variable (:type "int") (reparse-symbol classsubparts) [1518 1536])
+                    ("finalBookID" variable (:type "int") (reparse-symbol classsubparts) [1541 1557])
+                    ("finalAudiobookID" variable (:type "int") (reparse-symbol classsubparts) [1562 1583]))                  
+                :type "class")
+                nil [100 1587]))          
+      :file "library.h"
+      :pointmax 1608
+      :fsize 1648
+      :lastmodtime '(23510 1219 437785 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("LIBRARY_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("string" include (:system-flag t) nil [21 38])
+            ("library.h" include nil nil [39 59])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [61 81])
+            ("displayMainMenu" function
+               (:prototype-flag t
+                :type "int")
+                nil [82 104])
+            ("main" function (:type "int") nil [107 1966])
+            ("displayMainMenu" function (:type "int") nil [1968 2550]))          
+      :file "Source.cpp"
+      :pointmax 2550
+      :fsize 2561
+      :lastmodtime '(23510 1219 437785 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("AUDIOBOOKS_H" variable (:constant-flag t) nil [30 42])
+            ("string" include (:system-flag t) nil [43 60])
+            ("iostream" include (:system-flag t) nil [61 80])
+            ("AudioBooks" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [102 109])
+                    ("AudioBooks" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("AudioBooks" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [182 195])
+                    ("AudioBooks" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("authorInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [211 242])
+                            ("titleInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [243 273])
+                            ("checkedOutInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [274 302])
+                            ("IDinput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [303 322]))                          
+                        :type ("AudioBooks" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [200 323])
+                    ("setAuthor" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("authorInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [345 376]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [330 377])
+                    ("getAuthor" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [382 412])
+                    ("setTitle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("titleInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [432 462]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [418 463])
+                    ("getTitle" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [468 497])
+                    ("setCheckedOut" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("checkedOutInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [522 550]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [503 551])
+                    ("getCheckedOut" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [556 583])
+                    ("setID" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("IDinput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [600 619]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [589 620])
+                    ("getID" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [625 643])
+                    ("private" label nil (reparse-symbol classsubparts) [644 652])
+                    ("author" variable
+                       (:default-value "\"\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [657 681])
+                    ("title" variable
+                       (:default-value "\"\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [686 709])
+                    ("checkedOut" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [714 738])
+                    ("ID" variable
+                       (:default-value "-1"
+                        :type "int")
+                        (reparse-symbol classsubparts) [743 755]))                  
+                :type "class")
+                nil [83 759]))          
+      :file "audiobooks.h"
+      :pointmax 767
+      :fsize 774
+      :lastmodtime '(23510 1219 437785 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("AUDIOBOOKS_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("BOOKS_H" variable (:constant-flag t) nil [25 32])
+            ("string" include (:system-flag t) nil [33 50])
+            ("Books" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [67 74])
+                    ("Books" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Books" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [173 181])
+                    ("Books" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("authorInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [192 223])
+                            ("titleInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [224 254])
+                            ("checkedOutInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [255 283])
+                            ("IDinput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [284 303]))                          
+                        :type ("Books" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [186 304])
+                    ("setAuthor" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("authorInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [325 356]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [310 357])
+                    ("getAuthor" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [362 392])
+                    ("setTitle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("titleInput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [412 442]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [398 443])
+                    ("getTitle" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [448 477])
+                    ("setCheckedOut" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("inputCheckedOut" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [502 530]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [483 531])
+                    ("getCheckedOut" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [536 563])
+                    ("setID" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("IDinput" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [580 599]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [569 600])
+                    ("getID" function
+                       (:prototype-flag t
+                        :methodconst-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [605 623])
+                    ("private" label nil (reparse-symbol classsubparts) [624 632])
+                    ("author" variable
+                       (:default-value "\"\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [637 661])
+                    ("title" variable
+                       (:default-value "\"\""
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [666 689])
+                    ("checkedOut" variable
+                       (:default-value "false"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [694 718])
+                    ("ID" variable
+                       (:default-value "-1"
+                        :type "int")
+                        (reparse-symbol classsubparts) [723 735]))                  
+                :type "class")
+                nil [53 739]))          
+      :file "books.h"
+      :pointmax 759
+      :fsize 762
+      :lastmodtime '(23510 1219 437785 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOOKS_H")
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("audiobooks.h" include nil nil [1 24])
+            ("AudioBooks" function
+               (:constructor-flag t
+                :parent "AudioBooks"
+                :type ("AudioBooks" type (:type "class") nil nil))
+                nil [27 56])
+            ("AudioBooks" function
+               (:constructor-flag t
+                :parent "AudioBooks"
+                :arguments 
+                  ( ("authorInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81 112])
+                    ("titleInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [113 143])
+                    ("checkedOutInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [144 172])
+                    ("IDinput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [173 192]))                  
+                :type ("AudioBooks" type (:type "class") nil nil))
+                nil [58 322])
+            ("setAuthor" function
+               (:parent "AudioBooks"
+                :arguments 
+                  ( ("authorInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [352 383]))                  
+                :type "void")
+                nil [325 419])
+            ("getAuthor" function
+               (:methodconst-flag t
+                :parent "AudioBooks"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [420 485])
+            ("setTitle" function
+               (:parent "AudioBooks"
+                :arguments 
+                  ( ("titleInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [512 542]))                  
+                :type "void")
+                nil [486 576])
+            ("getTitle" function
+               (:methodconst-flag t
+                :parent "AudioBooks"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [577 640])
+            ("setCheckedOut" function
+               (:parent "AudioBooks"
+                :arguments 
+                  ( ("checkedOutInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [672 700]))                  
+                :type "void")
+                nil [641 744])
+            ("getCheckedOut" function
+               (:methodconst-flag t
+                :parent "AudioBooks"
+                :type "bool")
+                nil [745 811])
+            ("setID" function
+               (:parent "AudioBooks"
+                :arguments 
+                  ( ("IDinput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [835 854]))                  
+                :type "void")
+                nil [812 882])
+            ("getID" function
+               (:methodconst-flag t
+                :parent "AudioBooks"
+                :type "int")
+                nil [883 932]))          
+      :file "audiobooks.cpp"
+      :pointmax 932
+      :fsize 931
+      :lastmodtime '(23510 1219 437785 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("books.h" include nil nil [1 19])
+            ("Books" function
+               (:constructor-flag t
+                :parent "Books"
+                :type ("Books" type (:type "class") nil nil))
+                nil [23 42])
+            ("Books" function
+               (:constructor-flag t
+                :parent "Books"
+                :arguments 
+                  ( ("authorInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57 88])
+                    ("titleInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [89 119])
+                    ("checkedOutInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [120 148])
+                    ("IDinput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [149 168]))                  
+                :type ("Books" type (:type "class") nil nil))
+                nil [44 298])
+            ("setAuthor" function
+               (:parent "Books"
+                :arguments 
+                  ( ("authorInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [322 353]))                  
+                :type "void")
+                nil [300 389])
+            ("getAuthor" function
+               (:methodconst-flag t
+                :parent "Books"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [390 450])
+            ("setTitle" function
+               (:parent "Books"
+                :arguments 
+                  ( ("titleInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [472 502]))                  
+                :type "void")
+                nil [451 536])
+            ("getTitle" function
+               (:methodconst-flag t
+                :parent "Books"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [537 595])
+            ("setCheckedOut" function
+               (:parent "Books"
+                :arguments 
+                  ( ("checkedOutInput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [622 650]))                  
+                :type "void")
+                nil [596 694])
+            ("getCheckedOut" function
+               (:methodconst-flag t
+                :parent "Books"
+                :type "bool")
+                nil [695 756])
+            ("setID" function
+               (:parent "Books"
+                :arguments 
+                  ( ("IDinput" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [775 794]))                  
+                :type "void")
+                nil [757 822])
+            ("getID" function
+               (:methodconst-flag t
+                :parent "Books"
+                :type "int")
+                nil [823 867]))          
+      :file "books.cpp"
+      :pointmax 867
+      :fsize 866
+      :lastmodtime '(23510 1219 437785 0)
+      :unmatched-syntax nil))
+  :file "!home!dragomundo!Projects!Quest4!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
