@@ -45,22 +45,22 @@
 (require 'auto-complete)
 (ac-config-default)
 
-(require 'flycheck)
-(add-hook 'after-init-hook #'global-flycheck-mode)
-(add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++17")))
+;; (require 'flycheck)
+;; (add-hook 'after-init-hook #'global-flycheck-mode)
+;; (add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++17")))
 
-(defun my-flycheck-rtags-setup ()
-  "Configure flycheck-rtags for better experience."
-  (flycheck-select-checker 'rtags)
-  (setq-local flycheck-check-syntax-automatically nil)
-  (setq-local flycheck-highlighting-mode nil))
-(add-hook 'c++-mode-hook #'my-flycheck-rtags-setup)
+;; (defun my-flycheck-rtags-setup ()
+;;   "Configure flycheck-rtags for better experience."
+;;   (flycheck-select-checker 'rtags)
+;;   (setq-local flycheck-check-syntax-automatically nil)
+;;   (setq-local flycheck-highlighting-mode nil))
+;; (add-hook 'c++-mode-hook #'my-flycheck-rtags-setup)
 
 
 (require 'rtags)
 (require 'company)
 (require 'company-rtags)
-(require 'flycheck-rtags)
+;;(require 'flycheck-rtags)
 (setq rtags-autostart-diagnostics t)
 (rtags-diagnostics)
 (setq rtags-completions-enabled t)
