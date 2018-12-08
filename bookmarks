@@ -2,4 +2,14 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-()
+(("RTags_1"
+ (filename . "~/Projects/Quest5/audiobooks.h")
+ (front-context-string . "AudioBooks : pub")
+ (rear-context-string . "n\";\n	}\n}\n\nclass ")
+ (position . 312))
+("RTags_0"
+ (filename . "~/Projects/Quest5/audiobooks.cpp")
+ (front-context-string . "AudioBooks(const")
+ (rear-context-string . "\n}\n\nAudioBooks::")
+ (position . 90))
+)

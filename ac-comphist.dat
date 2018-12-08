@@ -1,82 +1,174 @@
-((("s" .
-   [2])
-  ("c" .
-   [2])
-  ("i" .
-   [1])
-  ("B" .
-   [2])
-  ("numAudioBooks" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 1])
-  ("numBooks" .
-   [4 0 0 0 0 0 0 0])
-  ("totalInventory" .
-   [0 0 0 0 0 1 2 1 1 0 0 0 0 0])
-  ("Audiobook" .
-   [1 0 0 0 0 0 0 0 0])
-  ("Book" .
-   [5 0 0 0])
-  ("BookType" .
-   [6 0 0 0 0 0 2 0])
-  ("checkedOutInput" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("library" .
-   [3 0 0 0 0 0 0])
-  ("Library" .
-   [3 0 0 0 0 0 0])
-  ("override" .
-   [0 0 0 0 1 0 0 0])
-  ("quote" .
+((("begin" .
    [1 0 0 0 0])
-  ("tab-stop-list" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("in" .
-   [5 0])
-  ("init" .
-   [2 0 0 0])
-  ("provide" .
-   [1 0 0 0 0 0 0])
-  ("define-key" .
-   [0 0 0 0 0 0 0 0 0 5])
-  ("c-mode-base-map" .
-   [0 0 0 0 0 0 0 0 0 1 0 2 0 0 2])
-  ("kbd" .
-   [5 0 0])
-  ("rtags-find-file" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("rtags" .
-   [1 0 0 0 0])
-  ("rtags-find-symbol" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("c-mode" .
-   [1 0 0 0 0 0])
-  ("rtags-find-references" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("rtags-find-virtuals-at-point" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("rtags-imenu" .
-   [0 0 0 0 0 0 0 0 0 0 1])
-  ("IDinput" .
-   [2 0 0 0 0 0 0])
-  ("Books" .
-   [3 0 0 0 0])
-  ("Inventory" .
-   [2 0 0 0 0 0 0 0 0])
-  ("AudioBook" .
-   [0 0 0 0 0 0 0 0 1])
-  ("AudioBooks" .
-   [0 0 0 0 0 0 1 0 0 0])
-  ("checkOut" .
+  ("chiter" .
+   [4 0 0 0 0 0])
+  ("charSequence" .
+   [4 0 0 0 0 0 0 0 2 0 0 0])
+  ("input" .
+   [5 0 0 0 0])
+  ("org-mode" .
    [1 0 0 0 0 0 0 0])
-  ("bookType" .
-   [5 0 1 0 0 0 0 0])
-  ("e" .
+  ("html2org" .
+   [0 0 0 0 1 0 0 0])
+  ("org-mode-hook" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("org-bullets-mode" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("add-hook" .
+   [2 0 0 0 0 0 0 0])
+  ("org-bullets" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("require" .
+   [3 0 0 0 0 0 0])
+  ("numAudioDisks" .
+   [1 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("n" .
    [2])
-  ("f" .
-   [3])
   ("cin" .
    [1 0 0])
-  ("n" .
+  ("f" .
+   [3])
+  ("e" .
+   [2])
+  ("bookType" .
+   [5 0 1 0 0 0 0 0])
+  ("checkOut" .
+   [1 0 0 0 0 0 0 0])
+  ("AudioBooks" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("AudioBook" .
+   [0 0 0 0 0 0 0 0 1])
+  ("Inventory" .
+   [23 0 0 0 0 0 0 0 0])
+  ("Books" .
+   [3 0 0 0 0])
+  ("IDinput" .
+   [2 0 0 0 0 0 0])
+  ("rtags-imenu" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("rtags-find-virtuals-at-point" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("rtags-find-references" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("c-mode" .
+   [1 0 0 0 0 0])
+  ("rtags-find-symbol" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("rtags" .
+   [1 0 0 0 0])
+  ("rtags-find-file" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("kbd" .
+   [6 0 0])
+  ("c-mode-base-map" .
+   [0 0 0 0 0 0 0 0 0 1 0 2 0 0 2])
+  ("define-key" .
+   [0 0 0 0 0 0 0 0 0 5])
+  ("provide" .
+   [1 0 0 0 0 0 0])
+  ("init" .
+   [2 0 0 0])
+  ("in" .
+   [6 0])
+  ("tab-stop-list" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("quote" .
+   [1 0 0 0 0])
+  ("override" .
+   [0 0 0 0 1 0 0 0])
+  ("Library" .
+   [15 0 0 0 0 0 0])
+  ("library" .
+   [6 0 0 0 0 0 0])
+  ("checkedOutInput" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("BookType" .
+   [6 0 0 0 0 0 2 0])
+  ("Book" .
+   [13 0 0 0])
+  ("Audiobook" .
+   [6 0 0 3 0 0 0 0 0])
+  ("totalInventory" .
+   [0 0 0 0 0 1 2 1 2 0 0 0 0 0])
+  ("numBooks" .
+   [5 0 0 0 0 0 1 0])
+  ("numAudioBooks" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 1])
+  ("B" .
+   [2])
+  ("i" .
+   [5])
+  ("c" .
+   [2])
+  ("s" .
+   [2])
+  ("defun" .
+   [1 0 0 0 0])
+  ("interactive" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("save" .
+   [1 0 0 0])
+  ("insert" .
+   [1 0 0 0 0 0])
+  ("global-set-key" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("insert-inventory" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("save-excursion" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("-" .
    [1])
-  ("numAudioDisks" .
-   [1 0 0 0 0 0 0 0 0 1 0 0 0])))
+  ("cc-mode" .
+   [1 0 0 0 0 0 0])
+  ("vector" .
+   [15 0 0 0 0 0])
+  ("inventory" .
+   [24 0 0 0 0 0 0 0 0])
+  ("std" .
+   [39 0 0])
+  ("at" .
+   [4 0])
+  ("bookIndex" .
+   [3 0 0 0 0 0 0 0 0])
+  ("addBook" .
+   [1 0 1 0 0 0 0])
+  ("string" .
+   [3 0 0 0 0 0])
+  ("author" .
+   [1 0 0 0 0 0])
+  ("cout" .
+   [9 0 0 1])
+  ("endl" .
+   [2 0 0 2])
+  ("booktype" .
+   [2 0 0 0 0 0 0 0])
+  ("push_back" .
+   [1 0 0 0 0 0 0 0 0])
+  ("checkedOut" .
+   [5 0 0 0 0 0 0 0 0 0])
+  ("t" .
+   [2])
+  ("choice" .
+   [8 0 0 0 0 0])
+  ("selection" .
+   [8 0 0 0 0 0 0 0 0])
+  ("armament" .
+   [2 0 0 0 0 0 0 0])
+  ("numOfWeapons" .
+   [0 0 0 0 0 1 0 0 0 0 0 0])
+  ("deque" .
+   [1 0 0 0 0])
+  ("getTitle" .
+   [1 0 0 0 0 0 0 0])
+  ("print" .
+   [4 0 0 0 0])
+  ("sout" .
+   [2 0 0 0])
+  ("output" .
+   [2 0 0 0 0 0])
+  ("ostringstream" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("printInventory" .
+   [0 0 0 0 0 0 0 2 7 1 1 0 0 0])
+  ("getch" .
+   [2 0 0 0 0])))
