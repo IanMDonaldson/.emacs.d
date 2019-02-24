@@ -1,0 +1,12 @@
+;;; package --- Summary:
+;;; Commentary:
+;; helm configuration file
+;;; Code:
+(require 'helm)
+(require 'helm-config)
+
+(helm-mode 1)
+(require 'helm-system-packages)
+
+(provide 'setup-helm)
+;;; setup-helm.el ends here

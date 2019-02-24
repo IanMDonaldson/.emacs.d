@@ -1,0 +1,11 @@
+;;; package --- Summary
+;;; Commentary:
+;;; Code:
+(require 'nyan-mode)
+(setq mode-line-format
+      (list
+       '(:eval (list (nyan-create)))
+       ))
+
+(provide 'setup-environment)
+;;; setup-environment.el ends here
