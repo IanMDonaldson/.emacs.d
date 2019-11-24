@@ -60,7 +60,7 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (setq helm-locate-fuzzy-match t)
 (setq helm-M-x-fuzzy-match t)
-(setq helm-buffers-fuzzy-matching t
+(setq helm-buffers-fupzzy-matching t
       helm-recenf-fuzzy-match     t)
 (helm-mode 1)
 (require 'helm-system-packages)

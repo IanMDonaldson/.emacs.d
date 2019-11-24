@@ -11,13 +11,13 @@
 
 ;; default to 4 visible spaces to display a tab
 (setq-default tab-width 4)
+(setq-default indent-tabs-mode nil)
 
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (set-language-environment "UTF-8")
 (prefer-coding-system 'utf-8)
 
-(setq-default indent-tabs-mode nil)
 (delete-selection-mode)
 (global-set-key (kbd "RET") 'newline-and-indent)
 
