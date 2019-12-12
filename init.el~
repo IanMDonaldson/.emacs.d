@@ -1,34 +1,79 @@
 ;;; Code:
-(setq package-list
-      '(helm xcscope flycheck auto-complete flyspell helm-ls-git helm-descbinds helm-flyspell helm-system-packages yasnippet smartparens volatile-highlights clean-aindent-mode helpful shell-pop term magit ac-helm flycheck-tip helm-cscope treemacs pulseaudio-control doom-themes flyspell-correct-helm helm-fuzzier highlight-symbol magit magithub treemacs treemacs-magit yasnippet-snippets yatemplate afternoon-theme abyss-theme monotropic-theme monokai-theme monokai-alt-theme monochrome-theme minimal-theme metalheart-theme mellow-theme melancholy-theme mbo70s-theme material-theme))
+(defvar package-list
+  '(
+    abyss-theme
+    ac-helm
+    afternoon-theme
+    aggressive-indent
+    auctex
+    auto-complete
+    doom-themes
+    flycheck
+    flycheck-tip
+    flyspell
+    flyspell-correct-helm
+    helm
+    helm-cscope
+    helm-descbinds
+    helm-flyspell
+    helm-fuzzier
+    helm-ls-git
+    helm-system-packages
+    helpful
+    highlight-symbol
+    magit
+    magit
+    magithub
+    material-theme
+    mbo70s-theme
+    melancholy-theme
+    mellow-theme
+    metalheart-theme
+    minimal-theme
+    monochrome-theme
+    monokai-alt-theme
+    monokai-theme
+    monotropic-theme
+    pulseaudio-control
+    shell-pop
+    smartparens
+    term
+    volatile-highlights
+    xcscope
+    yasnippet
+    yasnippet-snippets
+    yatemplate))
 (require 'package)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+	     '("melpa" . "http://melpa.org/packages/"))
+(package-initialize)
 (add-to-list 'load-path "~/.emacs.d/elpa/")
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+(tool-bar-mode -1)
+(blink-cursor-mode -1)
+(setq inhibit-startup-screen t)
+(setq debug-on-error t)
+(scroll-bar-mode t)
+(set-scroll-bar-mode 'right)
 
 ;;activate packages
-(package-initialize)
-;; fetch list of packages available
-(unless package-archive-contents
-  (package-refresh-contents))
+
 
 ;; install missing packages
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (package-install package)))
+
+
 
 ;;(require 'init-exwm "~/.emacs.d/lisp/init-exwm.el")
 (require 'setup-helm)
+(require 'setup-latex)
 (require 'setup-programming)
 (require 'setup-editing)
 (require 'setup-convenience)
+(require 'setup-external)
 (require 'setup-data)
-(require 'setup-files)
 (require 'setup-faces)
 (require 'setup-help)
 (require 'init-pdf-view)
-
 
 
 (custom-set-variables
@@ -44,9 +89,16 @@
  '(custom-enabled-themes (quote (doom-one)))
  '(custom-safe-themes
    (quote
-    ("2d1fe7c9007a5b76cea4395b0fc664d0c1cfd34bb4f1860300347cdad67fb2f9" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "93a0885d5f46d2aeac12bf6be1754faa7d5e28b27926b8aa812840fe7d0b7983" "100e7c5956d7bb3fd0eebff57fde6de8f3b9fafa056a2519f169f85199cc1c96" "6b2636879127bf6124ce541b1b2824800afc49c6ccd65439d6eb987dbf200c36" "7e78a1030293619094ea6ae80a7579a562068087080e01c2b8b503b27900165c" "3e335d794ed3030fefd0dbd7ff2d3555e29481fe4bbb0106ea11c660d6001767" "6749346a23542aad64e81ac371c32a7c88d1e9120c310533d4007f3461dfb145" "e1943fd6568d49ec819ee3711c266a8a120e452ba08569045dd8f50cc5ec5dd3" "35b000995eb4a526249078664d91b056feab7e96e81b2f226a0d9cad7f0a416e" "11986184025c9e658eeff90e95ab8e9592f40b3564a5854f9ce1eab1804abd79" "cc0dbb53a10215b696d391a90de635ba1699072745bf653b53774706999208e3" "4780d7ce6e5491e2c1190082f7fe0f812707fc77455616ab6f8b38e796cbffa9" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "d1ede12c09296a84d007ef121cd72061c2c6722fcb02cb50a77d9eae4138a3ff" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "f738c3eb5cfc7e730fea413f9cd8ba0624bd8b4837451660fe169f13f77c7814" "732b807b0543855541743429c9979ebfb363e27ec91e82f463c91e68c772f6e3" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" default)))
+    ("e47c0abe03e0484ddadf2ae57d32b0f29f0b2ddfe7ec810bd6d558765d9a6a6c" "2d1fe7c9007a5b76cea4395b0fc664d0c1cfd34bb4f1860300347cdad67fb2f9" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "93a0885d5f46d2aeac12bf6be1754faa7d5e28b27926b8aa812840fe7d0b7983" "100e7c5956d7bb3fd0eebff57fde6de8f3b9fafa056a2519f169f85199cc1c96" "6b2636879127bf6124ce541b1b2824800afc49c6ccd65439d6eb987dbf200c36" "7e78a1030293619094ea6ae80a7579a562068087080e01c2b8b503b27900165c" "3e335d794ed3030fefd0dbd7ff2d3555e29481fe4bbb0106ea11c660d6001767" "6749346a23542aad64e81ac371c32a7c88d1e9120c310533d4007f3461dfb145" "e1943fd6568d49ec819ee3711c266a8a120e452ba08569045dd8f50cc5ec5dd3" "35b000995eb4a526249078664d91b056feab7e96e81b2f226a0d9cad7f0a416e" "11986184025c9e658eeff90e95ab8e9592f40b3564a5854f9ce1eab1804abd79" "cc0dbb53a10215b696d391a90de635ba1699072745bf653b53774706999208e3" "4780d7ce6e5491e2c1190082f7fe0f812707fc77455616ab6f8b38e796cbffa9" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" "cab317d0125d7aab145bc7ee03a1e16804d5abdfa2aa8738198ac30dc5f7b569" "d1ede12c09296a84d007ef121cd72061c2c6722fcb02cb50a77d9eae4138a3ff" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "f738c3eb5cfc7e730fea413f9cd8ba0624bd8b4837451660fe169f13f77c7814" "732b807b0543855541743429c9979ebfb363e27ec91e82f463c91e68c772f6e3" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" default)))
  '(exwm-systemtray-height 12)
  '(exwm-systemtray-icon-gap 1)
+ '(face-font-family-alternatives
+   (quote
+    (("Open Sans" "Symbola" "Noto Sans Symbols2")
+     ("Monospace Serif" "Courier 10 Pitch" "Consolas" "Courier Std" "FreeMono" "Nimbus Mono L" "courier" "fixed")
+     ("courier" "CMU Typewriter Text" "fixed")
+     ("Sans Serif" "helv" "helvetica" "arial" "fixed")
+     ("helv" "helvetica" "arial" "fixed"))))
  '(fci-rule-color "#3C3D37" t)
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-tail-colors
@@ -67,7 +119,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (bison-mode auctex pulseaudio-control doom-themes company company-auctex company-rtags helm-descbinds helm-flyspell helm-ls-git flyspell-correct-helm helm-fuzzier clean-aindent-mode flycheck-rtags flycheck-tip helm-rtags helm-system-packages helpful highlight-symbol magit magithub nyan-mode rtags smartparens treemacs treemacs-magit volatile-highlights yasnippet yasnippet-snippets yatemplate ac-helm helm afternoon-theme abyss-theme pdf-tools monotropic-theme monokai-theme monokai-alt-theme monochrome-theme minimal-theme metalheart-theme mellow-theme melancholy-theme mbo70s-theme material-theme flycheck exwm)))
+    (ac-math esup indent-guide aggressive-indent bison-mode auctex pulseaudio-control doom-themes helm-descbinds helm-flyspell helm-ls-git flyspell-correct-helm helm-fuzzier flycheck-tip helm-system-packages helpful highlight-symbol magit magithub nyan-mode smartparens volatile-highlights yasnippet yasnippet-snippets yatemplate ac-helm helm afternoon-theme abyss-theme pdf-tools monotropic-theme monokai-theme monokai-alt-theme monochrome-theme minimal-theme metalheart-theme mellow-theme melancholy-theme mbo70s-theme material-theme flycheck exwm)))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
  '(ps-font-family (quote Monospace))

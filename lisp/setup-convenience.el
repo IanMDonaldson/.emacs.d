@@ -45,5 +45,6 @@
 
 ;; easier window navigation
 (windmove-default-keybindings)
+(which-key-mode)
 (provide 'setup-convenience)
 ;;; setup-convenience.el ends here

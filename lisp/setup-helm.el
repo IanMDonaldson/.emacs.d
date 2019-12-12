@@ -5,10 +5,34 @@
 (require 'helm)
 (require 'helm-config)
 (require 'helm-ls-git)
+(require 'helm-flycheck)
+(require 'helm-flyspell)
+(require 'helm-org)
+(require 'helm-org-rifle)
+(require 'helm-spotify-plus)
 
+;;----------------------------------------
+;;        helm-spotify
+;;----------------------------------------
+(global-set-key (kbd "C-c s s") 'helm-spotify-plus)  ;; s for SEARCH
+(global-set-key (kbd "C-c s f") 'helm-spotify-plus-next)
+(global-set-key (kbd "C-c s b") 'helm-spotify-plus-previous)
+(global-set-key (kbd "C-c s p") 'helm-spotify-plus-play)
+(global-set-key (kbd "C-c s g") 'helm-spotify-plus-pause) ;; g cause you know.. C-g stop things :)
+
+
+;;----------------------------------------
+;;          HELM-FLYSPELL
+;;----------------------------------------
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB work in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+
+;;----------------------------------------
+;; HELM-FLYCHECK
+;;----------------------------------------
+(eval-after-load 'flycheck
+  '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
 ;;-------------------------
 ;; HELM-LS-GIT
 ;;-------------------------
@@ -27,7 +51,7 @@
 
 
 (when (executable-find "curl")
-  (setq helm-google-suggest-use-curl-p t))
+  (setq helm-net-prefer-curl t))
 
 (setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
       helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.

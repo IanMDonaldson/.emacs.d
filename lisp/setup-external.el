@@ -78,10 +78,6 @@
 
 (global-set-key (kbd "<f2>") 'visit-ansi-term)
 
-;; PACKAGE: shell-pop
-;; GROUP: Processes -> Shell -> Shell Pop
-(require 'shell-pop)
-(global-set-key (kbd "C-c t") 'shell-pop)
 
 (provide 'setup-external)
 ;;; setup-external.el ends here

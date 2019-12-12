@@ -18,70 +18,41 @@
 ;; (global-set-key (kbd "C-x g s") 'magit-status)
 ;; (global-set-key (kbd "C-x g r") 'magit-reflog)
 ;; (global-set-key (kbd "C-x g t") 'magit-tag)
+;;; Code
 
-(require 'xcscope)
-(require 'helm-cscope)
 (require 'flycheck)
-(require 'auto-complete)
-(require 'ac-helm)
 (require 'flycheck-tip)
-(cscope-setup)
+(require 'company)
+
+
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
+
+(add-to-list 'auto-mode-alist
+	     '("\\.l\\'" . c-mode)
+	     '("\\.y\\'" . c-mode))
+;;---------------------------------------------
+;;     C++-MODE AND C MODE INDENTATION
 ;;-----------------------------------
-;;   COMPANY-MODE
-;;-----------------------------------
-;; (push 'company-rtags company-backends)
-;; (global-company-mode)
-;; (define-key c-mode-base-map (kbd "<C-tab>") (function company-complete))
 
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'c++-mode-hook (lambda () (setq flycheck-gcc-language-standard "c++17")))
+(add-hook 'c-mode-common-hook`
+          (lambda ()
+            (setq c-basic-offset 4)
+            (setq indent-tabs-mode nil)
+            (setq tab-width 4)
+            (setq standard-indent 4)
+            (setq c-tab-always-indent t)
+            (setq c-basic-indent 4)))
 
-
-;;-------------------------------------
-;;   HELM
-;;-------------------------------------
-(add-hook 'c-mode-hook 'helm-cscope-mode)
-(add-hook 'c++-mode-hook 'helm-cscope-mode)
-(add-hook 'java-mode-hook 'helm-cscope-mode);; Set key bindings
-(eval-after-load "helm-cscope"
+(eval-after-load 'cc-mode
   '(progn
-     (define-key helm-cscope-mode-map (kbd "M-t") 'helm-cscope-find-symbol)
-     (define-key helm-cscope-mode-map (kbd "M-r") 'helm-cscope-find-global-definition)
-     (define-key helm-cscope-mode-map (kbd "M-g M-c") 'helm-cscope-find-called-function)
-     (define-key helm-cscope-mode-map (kbd "M-g M-p") 'helm-cscope-find-calling-this-funtcion)
-     (define-key helm-cscope-mode-map (kbd "M-s") 'helm-cscope-select)))
+     (add-hook 'c++-mode-hook #'my-c++-indent-setup)
+     (define-key c-mode-base-map "/" 'self-insert-command)
+     (define-key c-mode-base-map "*" 'self-insert-command)))
 
-
-;;----------------------------
-;;   FLYCHECK-RTAGS-FUNCTION
-;;----------------------------
-
-;; (defun my-flycheck-rtags-setup ()
-;;   "Configure flycheck-rtags for better experience."
-;;   (flycheck-select-checker 'rtags)
-;;   (setq-local flycheck-check-syntax-automatically nil)
-;;   (setq-local flycheck-highlighting-mode nil))
-;; (add-hook 'c++-mode-hook #'my-flycheck-rtags-setup)
-;; (add-hook 'c++-mode-hook 'rtags-start-process-unless-running)
-;; (setq rtags-display-result-backend 'helm)
-
-;; ;;----------------------------
-;; ;;   RTAGS-KEYBINDINGS N STUFF
-;; ;;----------------------------
-
-;; (setq rtags-autostart-diagnostics t)
-;; (rtags-diagnostics)
-;; (setq rtags-completions-enabled t)
-;; (eval-after-load 'company
-;;   '(add-to-list
-;;     'company-backend 'company-rtags))
-
-;; (rtags-enable-standard-keybindings)
-;; (define-key c-mode-base-map (kbd "M-.") 'rtags-find-symbol-at-point)
-;; (define-key c-mode-base-map (kbd "M-,") 'rtags-location-stack-back)
-;; (define-key c-mode-base-map (kbd "M-;") 'rtags-find-file)
-;; (define-key c-mode-base-map (kbd "C-.") 'rtags-find-symbol)
-;; (define-key c-mode-base-map (kbd "C-,") 'rtags-find-references)
-;; (define-key c-mode-base-map (kbd "C-<") 'rtags-find-virtuals-at-point)
-;; (define-key c-mode-base-map (kbd "M-i") 'rtags-imenu)
 
 (provide 'setup-programming)
 ;;; setup-programming.el ends here

@@ -10,8 +10,7 @@
       )
 
 ;; default to 4 visible spaces to display a tab
-(setq-default tab-width 4)
-(setq-default indent-tabs-mode nil)
+
 
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -238,18 +237,11 @@ Position the cursor at it's beginning, according to the current mode."
 ;;----------------------------
 ;;   SMARTPARENS
 ;;----------------------------
-(require 'smartparens-config)
-(setq sp-base-key-bindings 'paredit)
-(setq sp-autoskip-closing-pair 'always)
-(setq sp-hybrid-kill-entire-symbol nil)
-(sp-use-paredit-bindings)
-
-;;----------------------------
-;;   CLEAN-AINDENT-MODE
-;;----------------------------
-(require 'clean-aindent-mode)
-(add-hook 'prog-mode-hook 'clean-aindent-mode)
-
+;; (require 'smartparens-config)
+;; (setq sp-base-key-bindings 'paredit)
+;; (setq sp-autoskip-closing-pair 'always)
+;; (setq sp-hybrid-kill-entire-symbol nil)
+;; (sp-use-paredit-bindings)
 
 ;;----------------------------
 ;;   YASNIPPET

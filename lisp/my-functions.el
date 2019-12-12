@@ -82,5 +82,5 @@ It only works for frames with exactly two windows."
           (select-window first-win)
           (if this-win-2nd (other-window 1))))))
 (global-set-key (kbd "C-x C-\\") 'toggle-window-split)
-
+(provide 'my-functions)
 ;;; functions.el ends here
